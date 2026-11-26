@@ -1,0 +1,35 @@
+BẢNG MÃ LỚP
+NANTAY – Nặn gốm bằng tay, 2 giờ
+BANXOAY – Làm gốm bàn xoay, 3 giờ
+VEGOM – Vẽ trang trí gốm, 2 giờ
+
+QUY TẮC CHUẨN HOÁ (5 quy tắc)
+1. ma_lop lấy theo bảng mã lớp.
+2. ngay_hoc dạng YYYY-MM-DD; tin nhắn không ghi năm thì lấy năm 2026; không có ngày cụ thể thì null.
+3. Khách không nhắc trẻ em thì tre_em là 0 và mọi khách là người lớn.
+4. ca_hoc chỉ nhận "sang", "chieu" hoặc null.
+5. ghi_chu chỉ ghi yêu cầu đặc biệt về sức khoẻ, đi lại, khó khăn khi thao tác; không có thì null.
+
+======================================================
+HAI TIN NHẮN MẪU ĐÃ XỬ LÝ ĐÚNG (dùng làm ví dụ)
+======================================================
+
+Tin nhắn mẫu 1:
+Đăng ký giúp mình lớp vẽ gốm ngày 09/11/2026, 1 người lớn 2 bé, ca sáng nha. Một bé thuận tay trái.
+Kết quả đúng:
+{"ma_lop": "VEGOM", "ngay_hoc": "2026-11-09", "nguoi_lon": 1, "tre_em": 2, "ca_hoc": "sang", "ghi_chu": "1 bé thuận tay trái"}
+
+Tin nhắn mẫu 2:
+Lớp bàn xoay còn chỗ ca chiều không ạ, em đi 1 mình, hôm nào cũng được.
+Kết quả đúng:
+{"ma_lop": "BANXOAY", "ngay_hoc": null, "nguoi_lon": 1, "tre_em": 0, "ca_hoc": "chieu", "ghi_chu": null}
+
+======================================================
+BA TIN NHẮN CẦN XỬ LÝ
+======================================================
+
+TN1: Cho mình 2 người lớn với 1 bé 10 tuổi học nặn gốm bằng tay ngày 13/12 nhé, ca chiều.
+
+TN2: Đặt 3 chỗ lớp bàn xoay ngày 10/01/2027 ạ. Một người bị đau cổ tay.
+
+TN3: Lớp vẽ gốm tháng 12 còn chỗ không ạ? Nhóm em 4 người lớn, một bạn đi xe lăn, học ca sáng.

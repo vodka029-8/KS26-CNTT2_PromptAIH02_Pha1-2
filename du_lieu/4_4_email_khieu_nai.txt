@@ -1,0 +1,36 @@
+EMAIL KHIẾU NẠI CỦA KHÁCH
+
+Gia đình tôi 3 người học lớp nặn gốm ngày 01/11/2026, mỗi người làm 2 sản phẩm và đã trả phí nung, giao sản phẩm. Khi nhận hàng, có 5 sản phẩm bị nứt vỡ. Cô hướng dẫn rất nhiệt tình, tôi không có gì phàn nàn về người hướng dẫn. Tôi đề nghị xưởng giải quyết thỏa đáng.
+
+======================================================
+CHÍNH SÁCH ĐỀN BÙ CỦA ĐẤT VIỆT WORKSHOP
+======================================================
+
+- hong_san_pham: sản phẩm bị nứt, vỡ khi nung hoặc khi giao: hoàn 150.000 đồng cho mỗi sản phẩm bị hỏng.
+- giao_tre: giao sản phẩm trễ quá 7 ngày so với hẹn: tặng voucher 50.000 đồng/khách.
+- huong_dan: khiếu nại về thái độ người hướng dẫn: tặng voucher 100.000 đồng/khách.
+- khac: chuyển bộ phận Chăm sóc khách hàng xem xét, chưa đề xuất mức đền bù.
+- Tổng mức đền bù trên 600.000 đồng phải được Quản lý xưởng duyệt trước khi gửi khách.
+
+======================================================
+ĐỊNH DẠNG ĐẦU RA CỦA TRẠM 1 (sinh viên viết prompt)
+======================================================
+
+Trạm 1 – đọc email, trả về chỉ một đối tượng JSON gồm đúng 4 trường:
+{"loai_su_co": một trong "hong_san_pham" | "giao_tre" | "huong_dan" | "khac", "so_khach": số nguyên, "so_san_pham_bi_hong": số nguyên hoặc null, "tom_tat": "không quá 20 từ"}
+
+======================================================
+PROMPT TRẠM 2 (đã có sẵn, không cần viết)
+======================================================
+
+Dưới đây là kết quả phân loại khiếu nại (JSON của Trạm 1) và chính sách đền bù. Chỉ dùng chính sách trong thẻ <chinh_sach> để tính tổng mức đền bù. Trả về đúng một đối tượng JSON, không giải thích:
+{"loai_su_co": ..., "muc_den_bu": tổng số tiền (đồng) hoặc null, "can_duyet": true nếu muc_den_bu trên 600.000, ngược lại false}
+<ket_qua_tram_1>(JSON của Trạm 1)</ket_qua_tram_1>
+<chinh_sach>(chính sách đền bù ở trên)</chinh_sach>
+
+======================================================
+PROMPT TRẠM 3 (đã có sẵn, không cần viết)
+======================================================
+
+Bạn là nhân viên chăm sóc khách hàng của Đất Việt Workshop. Dựa trên JSON trong thẻ <ket_qua_tram_2>, viết email phản hồi khách: xin lỗi, nêu đúng mức đền bù trong JSON, không tự đặt mức khác, giọng điệu chân thành, chuyên nghiệp, dưới 150 từ.
+<ket_qua_tram_2>(JSON của Trạm 2)</ket_qua_tram_2>
