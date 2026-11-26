@@ -72,7 +72,7 @@ Bước 1 :lấy mã lớp, loại lớp , ngày học ,độ tuổi ,ca học ,
 Bước 2 : Những dữ liệu còn thiếu vui lòng ghi bằng null.
 Bước 3 : Viết bằng 1 mảng JSON và cho ra đúng định dạng.
 T-Tone : Trả lời bằng tiếng Việt, lịch sự, tối đa 120 từ. 
-E-extras :
+E-extras : Chỉ trả JSON hợp lệ không chào hỏi không giải thích thêm.
 
 
 
